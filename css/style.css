@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    padding-top: 200px;
+}
+.container-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+    background-color: rgb(210, 228, 228);
+    gap: 30px;
+    max-width: 500px;
+    padding: 30px;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+img{
+   width: 100%;
+   height: 150px;
+   border-radius: 10px;
+   object-fit: cover    ;
+}
+
+.container-grid .grid-img:nth-child(3){
+    grid-column: 3/span 4;
+}
+.container-grid .grid-img:nth-child(4){
+    grid-column: 1/span 2;
+}
+
+/* ----------calculator ---------------*/
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-auto-rows: 80px;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: right;
+    padding: 5px;
+    color: #e0e0e0;
+}
+
+.btn {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.operator {
+    background-color: #ff9800; /* Operator buttons have a different color */
+}
+
+.zero {
+    grid-column: span 3; /* Button 0 spans 2 columns */
+}
+
+.equal {
+    grid-column: span 1; /* Equal button spans 2 rows */
+}
+
+.clean{
+    grid-column: 1/span 2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
